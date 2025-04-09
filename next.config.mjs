@@ -18,6 +18,7 @@ const config = withPWA({
         pathname: '/BearStudio/**',
       },
     ],
+    domains: ['assets.pokemon.com'],
   },
   async redirects() {
     return [

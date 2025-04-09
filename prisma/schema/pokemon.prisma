@@ -1,0 +1,33 @@
+model Pokemon {
+    id          String       @id @default(cuid())
+    name        String       @unique // Nom du Pokémon (ex: "Charizard")
+    type        PokemonType // Type principal
+    secondType  PokemonType? // Type secondaire (ex: Feu/Vol)
+    hp          Int // PV de base
+    attack      Int // Attaque de base
+    defense     Int // Défense de base
+    speed       Int // Vitesse de base
+    description String? // Petite description Pokédex
+    imageUrl    String? // Lien vers une image illustrant le Pokémon
+}
+
+enum PokemonType {
+    STEEL // Acier
+    FIGHTING // Combat
+    DRAGON // Dragon
+    WATER // Eau
+    ELECTRIC // Électrik
+    FAIRY // Fée
+    FIRE // Feu
+    ICE // Glace
+    BUG // Insecte
+    NORMAL // Normal
+    GRASS // Plante
+    POISON // Poison
+    PSYCHIC // Psy
+    ROCK // Roche
+    GROUND // Sol
+    GHOST // Spectre
+    DARK // Ténèbres
+    FLYING // Vol
+}
